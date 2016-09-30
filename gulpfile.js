@@ -7,32 +7,30 @@ var gulp = require('gulp'),
 
 // 清空资源
 gulp.task('clean', function() {
-  return gulp.src('dist/js').pipe(clean());
-});
-gulp.task('clean-css', function() {
-  return gulp.src('dist/css').pipe(clean());
+  gulp.src('dist')
+  .pipe(clean());
 });
 
 // 压缩modules文件
 gulp.task('babel', function() {
   gulp.src(['src/helper.js'])
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError())
-    .pipe(babel())
-    .pipe(uglify({
-      mangle: {
-        except: ['require', 'exports', 'module', '$']
-      }
-    }))
-    .pipe(gulp.dest('dist'));
+  .pipe(eslint())
+  .pipe(eslint.format())
+  .pipe(eslint.failAfterError())
+  .pipe(babel())
+  .pipe(uglify({
+    mangle: {
+      except: ['require', 'exports', 'module', '$']
+    }
+  }))
+  .pipe(gulp.dest('dist'));
 });
 
 // 压缩CSS
-gulp.task('css', ['clean-css'], function() {
-  gulp.src(['src/css/helper.css'])
+gulp.task('css', function() {
+  gulp.src(['src/helper.css'])
   .pipe(cleanCSS())
-  .pipe(gulp.dest('dist/css'));
+  .pipe(gulp.dest('dist'));
 });
 
 // DIST任务

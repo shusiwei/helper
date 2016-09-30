@@ -2,7 +2,7 @@
   "name": "helper",
   "version": "2.0.0",
   "description": "a helper for mobile WebApp dependent by jQuery",
-  "main": "dist/spa.js",
+  "main": "dist/helper.js",
   "devDependencies": {
     "babel-core": "^6.13.2",
     "babel-eslint": "^7.0.0",
@@ -23,14 +23,14 @@
     "jquery": "^3.1.0"
   },
   "scripts": {
-    "test": "test"
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shusiwei/helper.git"
   },
   "keywords": [
-    "spa"
+    "helper"
   ],
   "author": "shusiwei",
   "license": "MIT",
