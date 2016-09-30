@@ -11,7 +11,9 @@
 ;(function(global, factory) {
   'use strict';
 
-  if (typeof define === 'function' && define.amd) {
+  if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory(global, require('jquery'));
+  } else if (typeof define === 'function' && define.amd) {
     // AMD
     define(['jquery'], function($) {
       return factory(global, $);
@@ -22,7 +24,7 @@
       module.exports = factory(global, require('jquery'));
     });
   } else {
-    return (global.Helper = factory(global, global.jQuery));
+    global.Helper = factory(global, global.jQuery);
   };
 })(window, function(global, $) {
   'use strict';

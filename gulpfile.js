@@ -20,7 +20,7 @@ gulp.task('babel', function() {
   .pipe(babel())
   .pipe(uglify({
     mangle: {
-      except: ['require', 'exports', 'module', '$']
+      except: ['require', 'exports', 'module']
     }
   }))
   .pipe(gulp.dest('dist'));
