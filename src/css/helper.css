@@ -1,0 +1,132 @@
+@charset "utf-8";
+.ui-filter-blur{
+    transition:filter .3s ease-in-out;
+    -webkit-transition:-webkit-filter .3s ease-in-out;
+
+    filter:blur(.05rem);
+    -webkit-filter:blur(.05rem);
+}
+
+/* ui-notice */
+@keyframes zoomIn {
+    from {transform:scale(.95);}
+    to {transform:scale(1);}
+}
+@-webkit-keyframes zoomIn {
+    from {-webkit-transform:scale(.95);}
+    to {-webkit-transform:scale(1);}
+}
+@keyframes zoomOut {
+    from {transform:scale(1);}
+    to {transform:scale(1.05);}
+}
+@-webkit-keyframes zoomOut {
+    from {-webkit-transform:scale(1);}
+    to {-webkit-transform:scale(1.05);}
+}
+
+@keyframes slideUpIn {
+    from {transform:translateY(100%);}
+    to {transform:translateY(0);}
+}
+@-webkit-keyframes slideUpIn {
+    from {-webkit-transform:translateY(100%);}
+    to {-webkit-transform:translateY(0);}
+}
+@keyframes slideUpOut {
+    from {transform:translateY(0);}
+    to {transform:translateY(100%);}
+}
+@-webkit-keyframes slideUpOut {
+    from {-webkit-transform:translateY(0);}
+    to {-webkit-transform:translateY(100%);}
+}
+
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@-webkit-keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@keyframes fadeOut {
+    from {opacity:1;}
+    to {opacity:0;}
+}
+@-webkit-keyframes fadeOut {
+    from {opacity:1;}
+    to {opacity:0;}
+}
+.ui-notice{position:fixed;background-color:rgba(0,0,0,.5);display:none;}
+.ui-notice>.ui-notice-animate{position:absolute;}
+.ui-notice,.ui-notice>.ui-notice-animate{width:100%;height:100%;left:0;top:0;}
+.ui-notice.visible{display:block;}
+.ui-notice.fadeIn{
+    animation:fadeIn .4s ease;
+    -webkit-animation:fadeIn .4s ease;
+}
+.ui-notice.fadeOut{
+    animation:fadeOut .3s ease;
+    -webkit-animation:fadeOut .3s ease;
+}
+.ui-notice>.ui-notice-animate.zoomIn{
+    animation:zoomIn .4s ease;
+    -webkit-animation:zoomIn .4s ease;
+}
+.ui-notice>.ui-notice-animate.zoomOut{
+    animation:zoomOut .3s ease;
+    -webkit-animation:zoomOut .3s ease;
+}
+
+.ui-notice>.ui-notice-animate.slideUpIn{
+    animation:slideUpIn .4s ease;
+    -webkit-animation:slideUpIn .4s ease;
+}
+.ui-notice>.ui-notice-animate.slideUpOut{
+    animation:slideUpOut .3s ease;
+    -webkit-animation:slideUpOut .3s ease;
+}
+.ui-notice>.ui-notice-animate>p.ui-notice-desc,
+.ui-confirm{background-color:#fff;border-radius:.03rem;box-shadow:0 .01rem .03rem rgba(0,0,0,.2);overflow:hidden;}
+.ui-notice>.ui-notice-animate>p.ui-notice-desc{font-size:.14rem;color:#333;padding:.12rem;white-space:nowrap;word-break:break-all;max-width:90%;line-height:.24rem;text-align:center;}
+.ui-confirm{max-width:60%;min-width:2.5rem;padding-bottom:.4rem;}
+
+.ui-confirm>.ui-confirm-desc{font-size:.14rem;line-height:.22rem;color:#333;padding:.2rem;text-align:center;position:relative;border-bottom:solid 1px rgba(0,0,0,.05);word-break:break-all;}
+.ui-confirm>.ui-confirm-btn{position:absolute;bottom:0;font-size:.14rem;line-height:.4rem;text-align:center;}
+.ui-confirm>.ui-confirm-btn{width:50%;}
+.ui-confirm>.ui-confirm-btn:first-of-type{left:0;}
+.ui-confirm>.ui-confirm-btn:last-of-type{right:0;}
+.ui-confirm>.ui-alert-btn{width:100%;}
+
+/* ui-tips */
+@keyframes scaleIn {
+    from {transform:scale(.5);opacity:0;}
+    to {transform:scale(1);opacity:1;}
+}
+@-webkit-keyframes scaleIn {
+    from {-webkit-transform:scale(.5);opacity:0;}
+    to {-webkit-transform:scale(1);opacity:1;}
+}
+@keyframes scaleOut {
+    from {transform:scale(1);opacity:1;}
+    to {transform:scale(1.3);opacity:0;}
+}
+@-webkit-keyframes scaleOut {
+    from {-webkit-transform:scale(1);opacity:1;}
+    to {-webkit-transform:scale(1.3);opacity:0;}
+}
+.ui-tips{width:100%;position:fixed;left:0;bottom:8%;text-align:center;pointer-events:none;display:none;}
+.ui-tips.visible{display:block;}
+.ui-tips>.ui-tips-desc{border-radius:.03rem;font-size:.14rem;padding:.1rem .14rem;line-height:1.5em;max-width:75%;display:inline-block;box-shadow:0 0 .2rem rgba(0, 0, 0,.3);background-color:rgba(0, 0, 0,.75);color:#fff;word-break:break-all;}
+.ui-tips.error>.ui-tips-desc{background-color:rgba(245, 0, 3, .95);}
+.ui-tips.success>.ui-tips-desc{background-color:rgba(24, 188, 255, .95);}
+.ui-tips.white>.ui-tips-desc{background-color:rgba(255,255,255,.95);color:#333;}
+.ui-tips>.ui-tips-desc.scaleIn{
+    animation:scaleIn .3s ease;
+    -webkit-animation:scaleIn .3s ease;
+}
+.ui-tips>.ui-tips-desc.scaleOut{
+    animation:scaleOut .2s ease;
+    -webkit-animation:scaleOut .2s ease;
+}
