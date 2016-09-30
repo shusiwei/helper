@@ -13,13 +13,13 @@ function(a, b[, c, d]) // 参数a, b 为必要参数，c, d为可选参数
 ```
 
 ##安装
-###git
+####git
 
 ```bash
 git clone https://github.com/shusiwei/helper.git
 ```
 
-###bower
+####bower
 
 ```bash
 bower install --save shusiwei/helper
@@ -27,7 +27,7 @@ bower install --save shusiwei/helper
 
 ##使用（Use）
 
-###页面引入
+####页面引入
 
 ```html
 <link rel="stylesheet" type="text/css" href="../js/helper.css> // 引入样式
@@ -146,7 +146,7 @@ Helper.getDate(number, start) // 得到未来日期
 start = string// 从哪一天开始算起，格式如：['2016-10-01']
 ```
 ##UA
-####isiOS">isiOS
+####isiOS
 ```javascript
 Helper.UA.isiOS(ver) // 当前系统是不是iOS
 ver = number // 具体的版本号
