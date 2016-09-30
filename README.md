@@ -139,36 +139,36 @@ pattern = string/number [4] // 要格式化的格式，接受字符串和数字�
 maxLength = number // 最大长度，如果 pattern 为数字时，此值为必填项
 separator = string [' '] // 分隔符，默认为 ' ' 空格
 ```
-####getDate">getDate
+####getDate
 ```javascript
 Helper.getDate(number, start) // 得到未来日期
 * number = number // 未来多少天
 start = string// 从哪一天开始算起，格式如：['2016-10-01']
 ```
-## id="ua">UA
+##UA
 ####isiOS">isiOS
 ```javascript
 Helper.UA.isiOS(ver) // 当前系统是不是iOS
 ver = number // 具体的版本号
 ```
-####isAndroid">isAndroid
+####isAndroid
 ```javascript
 Helper.UA.isAndroid(ver) // 当前系统是不是安卓
 ver = number // 具体的版本号
 ```
-####isMobile">isMobile
+####isMobile
 ```javascript
 Helper.UA.isMobile() // 当前系统是不是移动平台
 ```
-####isKernel">isKernel
+####isKernel
 ```javascript
 Helper.UA.isKernel() // 当前浏览器内核是否为某个浏览器内核 // wechat/qq/mqq/uc/safari/chrome/firefox
 ```
-####isWebkit">isWebkit
+####isWebkit
 ```javascript
 Helper.UA.isWebkit() // 当前浏览器是否为Webkit内核
 ```
-####size">size
+####size
 ```javascript
 Helper.size // 窗口尺寸数据
 
@@ -179,39 +179,45 @@ winHeight // 窗口高度
 scrollTop // 滚动条y值
 scrollLeft // 滚动条x值
 ```
-## id="dom">DOM 操作
-####getVisibles">getVisibles
+##DOM 操作
+
+####getVisibles
+
 ```javascript
 Helper.getZIndex(selector, context) // 得到当前元素的兄弟元素中最高ZIndex值高一层ZIndex值
 
 * selector = selector // 选择器
 context = context // 选择器范围
 ```
-####getSize">getSize
+
+####getSize
 ```javascript
 Helper.getSize(selector, options) // 得到元素实际的占用尺寸
 
 * selector = selector // 选择器
 options = { // 选项
-height : array // 高的取值依据 ['paddingTop', 'paddingBottom', 'borderTopWidth', 'borderBottomWidth', 'height']
-width : array // 高的取值依据 ['paddingLeft', 'paddingRight', 'borderLeftWidth', 'borderRightWidth', 'width']
-preset : {
-paddingLeft : number // 取值预设
-}
+  height : array // 高的取值依据 ['paddingTop', 'paddingBottom', 'borderTopWidth', 'borderBottomWidth', 'height']
+  width : array // 高的取值依据 ['paddingLeft', 'paddingRight', 'borderLeftWidth', 'borderRightWidth', 'width']
+  preset : {
+    paddingLeft : number // 取值预设
+  }
 }
 ```
-####inViewport">inViewport
+
+####inViewport
 ```javascript
 Helper.inViewport(target) // 判断一个DOM是否显示在视野范围内
 
 * target = selector // 选择器
 ```
-####isPageBottom">isPageBottom
+
+####isPageBottom
 ```javascript
 Helper.isPageBottom(threshold) // 是否到了页面底部
 
 threshold = number [0] // 阀值
 ```
+
 ####isChildNode
 ```javascript
 Helper.isChildNode(childNode, parentNode) // 一个元素是否为别一个元素的子元素
@@ -219,19 +225,23 @@ Helper.isChildNode(childNode, parentNode) // 一个元素是否为别一个元�
 childNode = DOM // 子元素
 parentNode = DOM // 父元素
 ```
-####px2rem">px2rem
+
+####px2rem
 ```javascript
 Helper.px2rem(px) // px单位转换到rem单位
 ```
-####rem2px">rem2px
+
+####rem2px
 ```javascript
 Helper.rem2px(px) // rem转换到px单位
 ```
-####htmlpx2rem">htmlpx2rem
+
+####htmlpx2rem
 ```javascript
 Helper.htmlpx2rem(html) // 把html字符串中style属性的px单位转换到rem单位
 ```
-####autoRootEM">autoRootEM
+
+####autoRootEM
 ```javascript
 Helper.autoRootEM(width) // 为页面生成动态REM单位的style元素
 width = number // 设计稿的DPI宽度值
